@@ -40,7 +40,6 @@ void insertion_sort_list(listint_t **list)
 		{
 			if (prev->prev->n > current->n)/**0(n^2)*/
 			{
-				printf("%d\n", prev->prev->n);
 				swap(prev->prev, current);/**0(n^2)*/
 				if (!prev->prev)/**0(n^2)*/
 					*list = current;/**0(n^2)*/
