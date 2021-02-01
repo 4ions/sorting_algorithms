@@ -25,11 +25,9 @@ void swap(int *xp, int *yp)
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;/** O(1)*/
-	int check = 0;/** O(1)*/
 
 	for (i = 0; i < size - 1; i++)/** O(n)*/
 	{
-		check = 0;/** O(n)*/
 		for (j = 0; j < size - i - 1; j++)/** O(n*n)*/
 		{
 			/** Check if next number is greater*/
@@ -39,11 +37,9 @@ void bubble_sort(int *array, size_t size)
 				swap(&array[j], &array[j + 1]);/** O(n*n)*/
 				print_array(array, size);/** O(n*n)*/
 				/** "check"  keep the loop going*/
-				check = 1;/** O(n*n)*/
 			}
 		}
-		if (check == 0)/** O(n)*/
-			break;/** O(n)*/
+
 	}
 } /**  1 + 1 + n + n + n*n + n*n + n*n + n*n n*n + n +  n*/
 /** = 5n^2 + 3n + 2 = O(n^2) */
