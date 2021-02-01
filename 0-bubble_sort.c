@@ -26,7 +26,7 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;/** O(1)*/
 
-	if (!array) || !size)
+	if (!array || !size)
 		return;
 
 	for (i = 0; i < size - 1; i++)/** O(n)*/
